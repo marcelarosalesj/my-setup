@@ -80,6 +80,7 @@ config_docker(){
     sudo usermod -aG docker $USER
     sudo gpasswd -a $USER docker
     newgrp docker
+    sudo chown $USER:$USER /var/run/docker.sock
 }
 
 print_usage(){
