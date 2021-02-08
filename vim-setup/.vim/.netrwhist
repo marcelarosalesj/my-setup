@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/marosale/Repos/valgrind_suppression_reduce/supp_files'
+let g:netrw_dirhist_2='/home/marosale/Repos/daos/utils'
+let g:netrw_dirhist_3='/home/marosale/Repos/daos/src/rdb/raft'
+let g:netrw_dirhist_4='/home/marosale/Repos/daos/test_results_f1'
+let g:netrw_dirhist_5='/home/marosale/Repos/daos/test_results_master'
+let g:netrw_dirhist_6='/home/marosale/Repos/daos/debug'
