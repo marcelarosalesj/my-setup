@@ -23,3 +23,8 @@ set expandtab
 set smarttab
 set shiftwidth=4
 set tabstop=4
+
+" my additions
+set number
+set colorcolumn=80
+imap jj <ESC>
