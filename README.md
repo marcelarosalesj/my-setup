@@ -33,6 +33,14 @@ ssh-add ~/.ssh/id_ed25519
 ```
 Then, add it to the Github settings page.
 
+## VIM
+* Add these to `~/.vimrc`
+```
+set number
+set colorcolumn=80
+imap jj <ESC>
+```
+
 ## Bash config
 * Install [bash-git-prompt](https://github.com/magicmonty/bash-git-prompt)
 ```
@@ -55,11 +63,16 @@ alias vi="vim"
 alias repos="cd ~/Repos"
 alias l="ls -lah"
 ```
+## Docker
 
-## VIM
-* Add these to `~/.vimrc`
+* Follow [this guide for Fedora](https://docs.docker.com/engine/install/fedora/)
 ```
-set number
-set colorcolumn=80
-imap jj <ESC>
+sudo dnf -y install dnf-plugins-core
+sudo dnf config-manager \
+    --add-repo \
+    https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install docker-ce docker-ce-cli containerd.io
+sudo systemctl start docker
+sudo docker run hello-world
 ```
+* Consider the (post-installation steps)[https://docs.docker.com/engine/install/linux-postinstall/]
