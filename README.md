@@ -2,8 +2,13 @@
 
 * Run these commands 
 ```
+# Fedora
 mkdir ~/Repos
 sudo dnf install -y tree git tmux vim
+
+# Ubuntu
+mkdir ~/Repos
+sudo apt install -y tree git tmux vim
 ```
 
 ## Tmux
@@ -27,7 +32,7 @@ git config --global core.editor "vim"
 
 * Generate SSH key and add it to the ssh-agent.
 ```
-ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "marcelarosalesj@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ```
@@ -38,7 +43,10 @@ Then, add it to the Github settings page.
 ```
 set number
 set colorcolumn=80
-imap jj <ESC>
+inoremap jj <ESC>
+filetype plugin indent on
+colorscheme ron
+nnoremap <F3> :set hlsearch!<CR>
 ```
 
 ## Bash config
