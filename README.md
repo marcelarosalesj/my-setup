@@ -8,7 +8,7 @@ sudo dnf install -y tree git tmux vim
 
 # Ubuntu
 mkdir ~/Repos
-sudo apt install -y tree git tmux vim net-tools
+sudo apt install -y tree git tmux vim net-tools curl
 ```
 
 ## Tmux
@@ -75,6 +75,7 @@ alias l="ls -lah"
 
 * Follow [this guide for Fedora](https://docs.docker.com/engine/install/fedora/)
 ```
+# Fedora
 sudo dnf -y install dnf-plugins-core
 sudo dnf config-manager \
     --add-repo \
@@ -82,5 +83,45 @@ sudo dnf config-manager \
 sudo dnf install docker-ce docker-ce-cli containerd.io
 sudo systemctl start docker
 sudo docker run hello-world
+
+# Ubuntu
+
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get update -y # Ubuntu
+
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get update -y 
+sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update -y
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+sudo docker run hello-world
+ 
+ 
+# Linux Post-steps
+ 
+ sudo groupadd docker
+ sudo usermod -aG docker $USER
+ newgrp docker 
+ docker run hello-world
+sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update -y
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+sudo docker run hello-world
+ 
+ 
+# Linux Post-steps
+ 
+ sudo groupadd docker
+ sudo usermod -aG docker $USER
+ newgrp docker 
+ docker run hello-world
 ```
 * Consider the (post-installation steps)[https://docs.docker.com/engine/install/linux-postinstall/]
