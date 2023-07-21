@@ -28,6 +28,11 @@ Remember to override by modifying `.tmux/.tmux.conf.local`
 git config --global user.name "Marcela Rosales"
 git config --global user.email marcelarosalesj@gmail.com
 git config --global core.editor "vim"
+
+#
+git config --global alias.tree 'log --oneline --graph --decorate --all'
+git config --global alias.tree
+git tree
 ```
 
 * Generate SSH key and add it to the ssh-agent.
