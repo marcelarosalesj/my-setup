@@ -130,3 +130,12 @@ sudo docker run hello-world
  docker run hello-world
 ```
 * Consider the (post-installation steps)[https://docs.docker.com/engine/install/linux-postinstall/]
+
+# Utilities
+
+- https://github.com/sharkdp/fd
+```
+sudo apt install fd-find
+ln -s $(which fdfind) ~/.local/bin/fd
+```
+- https://github.com/BurntSushi/ripgrep
