@@ -139,3 +139,6 @@ sudo apt install fd-find
 ln -s $(which fdfind) ~/.local/bin/fd
 ```
 - https://github.com/BurntSushi/ripgrep
+```
+sudo apt-get install ripgrep
+```
