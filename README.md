@@ -8,7 +8,7 @@ sudo dnf install -y tree git tmux vim
 
 # Ubuntu
 mkdir ~/Repos
-sudo apt install -y tree git tmux vim net-tools curl
+sudo apt install -y tree git tmux vim net-tools curl htop
 ```
 
 ## Tmux
