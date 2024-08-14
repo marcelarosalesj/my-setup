@@ -30,9 +30,9 @@ git config --global user.email marcelarosalesj@gmail.com
 git config --global core.editor "vim"
 
 #
-git config --global alias.tree 'log --oneline --graph --decorate --all'
-git config --global alias.tree
-git tree
+git config --global alias.ll "log -n 5 --oneline --graph --decorate"
+git config --global alias.ll
+git ll
 ```
 
 * Generate SSH key and add it to the ssh-agent.
